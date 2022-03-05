@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dom</title>
+    <script src="Script.js" type="text/javascript">
+
+    </script>
+
+<!-- Script of Just button with id-->
+          <script type="text/javascript">
+            //Dom Manuplaction
+            function buttonClick(){
+            var str=document.getElementById("heading2").innerHTML="Text changed!wow";
+                alert("Button Clicked");
+            }
+          </script>
+
+          <script type="text/javascript">
+            //Dom Manuplaction
+            function buttonClick2(){
+            var str=document.getElementById("heading3").innerHTML="New Header FIle";
+            }
+          </script>
+
+
+<!-- Script of Text button with id -->
+          <script type="text/javascript">
+            function fn1(){
+              var str=document.getElementById("text1").value;
+              alert(str);
+            }
+          </script>
+
+<!-- Script of Radion button id-->
+        <script type="text/javascript">
+          function fn2(){
+              var rd1=document.getElementById("rd1");
+              var rd2=document.getElementById("rd2");
+              if(rd1.checked==true){
+               alert("The channel is :"+rd1.value);
+             }
+              else if(rd2.checked==true){
+               alert("The channel is :"+rd2.value);
+             }
+              else
+                 alert("no channel selected");
+          }
+        </script>
+
+<!-- Script of Drop down box- with id and array-->
+        <script type="text/javascript">
+          function fn3(){
+            var sel=document.getElementById("selectbox");
+            alert(sel.options[sel.selectedIndex].value);
+          }
+        </script>
+
+
+<!-- Script of para with tag name-->
+        <script type="text/javascript">
+          function changeStyling(){
+            var para=document.getElementsByTagName("p");
+            //Here i am getting problem with  font size
+            para[0].style.fontSize=500;
+            para[1].style.color="red";
+            para[2].style.fontSize=55;
+            para[2].style.fontWeight="bold";
+            para[3].style.fontStyle="italic";
+            for(var i=0;i<para.length;i++){
+              para[i].style.fontSize=22;
+              para[i].style.color="green";
+            }
+          }
+        </script>
+
+
+<!-- Script of para and link ect.., with class name-->
+        <script type="text/javascript">
+             function changeStyling1(){
+               var element=document.getElementsByClassName("para");
+               for(var x=0;x<element.length;x++){
+                 element[x].style.color="red";
+               }
+             }
+        </script>
+
+
+  </head>
+  <body>
+
+    <h1>Hai hello!</h1>
+
+        <button onclick="buttonClick()">Click ME</button>
+        <h2 id="heading2">Some random Text</h2>
+        <br><br>
+
+        <h2 id="heading3">    </h2>
+        <button onclick="buttonClick2()">Update text</button>
+        <br><br><br><br>
+
+
+
+         <input type="text" name="" value="" id="text1" placeholder="Enter anything">
+         <br>
+         <button id="btn1" onclick="fn1()">Button</button>
+         <br><br>
+
+
+        <input type="radio" name="simple" value="val1" id="rd1" >Simple</input>
+        <br>
+        <input type="radio" name="simple" value="val2" id="rd2" >Learing</input>
+        <br>
+        <button  onclick="fn2()" id="bt1">Button</button>
+        <br><br>
+
+         <select  id="selectbox">
+           <option value="Simple1">One</option>
+           <option value="Simple2">Two</option>
+           <option value="Simple3">Three</option>
+         </select>
+         <br>
+         <button  onclick="fn3()" id="btn3">Button</button>
+         <br><br>
+
+        <p>The is parra1</p>
+        <p>The is parra2</p>
+        <p>The is parra3</p>
+        <p>The is parra4</p>
+        <p>The is parra5</p>
+        <button onclick="changeStyling()" >Button</button>
+         <br><br>
+<!--//id: shoud be unique but the class can have same names so that that set of class we can deal but id need to be different.ANd by same class name we have p and anchor at a same time
+//id have more preference that class
+//place holder: means what is displayed on that box befor operation
+//onclick: is pre-define command
+//type: in input referce to what type of input we need like password text radio ect..,
+//name:
+//value:
+--->
+
+
+        <p class="para" id="p1">The is parra1</p>
+        <p class="">The is parra2</p>
+        <p class="para">The is parra3</p>
+        <p class="para4">The is parra4</p>
+        <p class="para">The is parra5</p>
+        <a href="#" class="para">This is anchor</a>
+        <br>
+        <button onclick="changeStyling1()" >Button</button>
+        <br><br><br><br>    <br><br><br><br>
+
+
+
+        <img id="img1" onmouseover="setNewImage()" onmouseout="setOldImage()" src="eye.png" alt="" width="200">
+         <br><br><br><br><br>
+
+
+
+        <p>Click the button to demonstrate the prompt box.</p>
+        <button onclick="myFunction()">Try it</button>
+        <p id="demo"></p>
+        <script>
+        function myFunction() {
+          var person = prompt("Please enter your name", "Ben");
+          if (person != null) {
+            document.getElementById("demo").innerHTML =
+            "Hello " + person + "! How are you today?";
+          }
+        }
+        </script>
+        <br><br><br>
+
+
+
+
+        <script language = "Javascript">
+
+        	var number1,
+        	    n1,n2,
+        	    number2,
+        	    sum;
+        function sum(){
+        	number1=window.prompt("enter number 1", "0");
+        	number2=window.prompt("enter number 2", "0");
+        	n1 = parseInt(number1);
+        	n2= parseInt(number2);
+        	sum = n1 + n2;
+        	document.writeln("<P>Sum is "+sum+"</P>");
+        }
+        </script>
+        <button onclick="sum()">Enter Button to add Two numbers</button>
+        <br><br><br><br><br>
+
+
+
+
+
+
+<!---JavaScript Question ---->
+        <div class="">
+          <form>
+            Select the image:
+            <select id="mySelect">
+              <option value="a1">Balloon</option>
+              <option value="a2">Apple</option>
+              <option value="a3">Ball</option>
+              <option value="a4">Cot</option>
+            </select>
+          </form>
+
+          <p>Click the button to change the selected image.</p>
+
+          <button type="button" onclick="myFunction()">Try it</button>
+          with <input type="text" id="text2"></input> Colour
+          <img src="a1.png"
+               name = "imgDisplay"
+               height = 100
+               width = 100>
+          <script>
+          function myFunction() {
+
+            document.imgDisplay.src = document.getElementById("mySelect").value+".png";
+            document.body.style.background=text2.value;
+           }
+          </script>
+        </div>
+
+
+
+
+  </body>
+</html>
